@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrustGuard - Anti-Scam Cybersecurity</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #007BFF;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    nav .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    nav .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav .nav-links a:hover {
+      color: #FFC107;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x800') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .cta-buttons {
+      margin-top: 2rem;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .cta-buttons button {
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      background-color: #FFC107;
+      color: #333;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-buttons button:hover {
+      background-color: #e0a800;
+    }
+
+    /* About Section */
+    .about {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Tools Section */
+    .tools {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .tools h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .tool-cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <img src="https://via.placeholder.com/40" alt="TrustGuard Logo">
+      <span>TrustGuard</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Protecting You from Online Scams</h1>
+      <p>Your Cybersecurity Shield</p>
+      <div class="cta-buttons">
+        <button onclick="scanLink()">Scan a Link</button>
+        <button onclick="reportScam()">Report a Scam</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>TrustGuard is dedicated to empowering users to navigate the digital world safely. Our mission is to provide tools and resources to detect and prevent online scams. With cutting-edge technology and a user-first approach, we ensure your online safety.</p>
+  </section>
+
+  <!-- Tools Section -->
+  <section id="tools" class="tools">
+    <h2>Our Tools</h2>
+    <div class="tool-cards">
+      <div class="card">
+        <h3>Scam Link Checker</h3>
+        <p>Verify if a link is safe to click.</p>
+        <button onclick="scanLink()">Try It Now</button>
+      </div>
+      <div class="card">
+        <h3>Scam Database</h3>
+        <p>Search our database of known scams.</p>
+        <button onclick="searchDatabase()">Search</button>
+      </div>
+      <div class="card">
+        <h3>Reporting Tool</h3>
+        <p>Report a scam to help others.</p>
+        <button onclick="reportScam()">Report</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 TrustGuard. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Example functions for buttons
+    function scanLink() {
+      const link = prompt("Enter the link to scan:");
+      if (link) {
+        alert(`Scanning link: ${link}\n(This is a demo feature.)`);
+      }
+    }
+
+    function reportScam() {
+      const scamDetails = prompt("Enter details of the scam:");
+      if (scamDetails) {
+        alert(`Thank you for reporting!\nDetails: ${scamDetails}\n(This is a demo feature.)`);
+      }
+    }
+
+    function searchDatabase() {
+      const query = prompt("Enter your search query:");
+      if (query) {
+        alert(`Searching database for: ${query}\n(This is a demo feature.)`);
+      }
+    }
+  </script>
+</body>
+</html>
